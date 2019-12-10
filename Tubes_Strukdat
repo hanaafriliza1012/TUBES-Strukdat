@@ -88,3 +88,94 @@ if(pil!='1' && pil !='2' && pil !='3' )
                             cin>>id[cek].no_bpjs;
                         }
                         else if(id[cek].jenis=='b' || id[cek].jenis=='B'){
+	
+                            cout<<"Nomor BPJS\t: ";
+                            id[cek].no_bpjs==NULL;
+						}
+                        else
+                        {
+
+                            cout<<"\n\nAnda Salah Memilih BPJS/NON BPJS\n\n";
+                            cout<<"\n\n";
+                            goto ulang;
+                        }
+
+                        cout<<endl;
+                        cek++;
+                        system("cls");
+
+                        cout<<"Antrian saat ini\t:\n\n";
+                                for(int z=0;z<cek;z++)
+                                {
+
+                                    cout<<"Nomor Antri\t: "<<z+1;
+                                    cout<<endl;
+                                    cout<<"Nama Pasien\t: "<<id[z].nama;
+                                    cout<<"Nomor BPJS\t: "<<id[z].no_bpjs;
+                                    cout<<"BPJS / NON-BPJS\t: ";
+                                    if(id[z].jenis=='a' || id[z].jenis=='A')
+                                    {
+                                        cout<<"BPJS";
+                                    }
+                                    else if(id[z].jenis=='b' || id[z].jenis=='B')
+                                    {
+                                        cout<<"NON-BPJS";
+                                    }
+                                 
+                                }
+
+
+
+
+                    cout<<"\n\n";
+                    system("PAUSE");
+                }
+                else
+                {
+                    if(pil=='2')     //ENQUEUE
+                    {
+                        if(cek==0)
+                            cout<<"Antrian kosong";
+                        else
+                        {
+                            for(int z=0;z<cek;z++)
+                            hapus=z;
+                            for(int v=0;v<cek;v++)
+                                ant[v].data=ant[v+1].data;
+                            ant[cek].data=0;
+                            cek--;
+                            system("cls");
+                            cout<<"\nAntrian dengan nomor 1 diproses\n";
+                            cout<<"\n\t\tData Pasien \n\n";
+                            cout<<"Nama Pasien\t: "<<id[0].nama<<endl;
+                            cout<<"BPJS / NON-BPJS\t: "<<id[0].jenis<<endl;
+                            cout<<"NOMOR BPJS\t\t: "<<id[0].no_bpjs<<endl;
+                            cout<<endl;
+                            {
+                                int b;
+                                for(b=0;b<cek;b++)
+                                id[b]=id[b+1];
+                                b--;
+                            }
+                        }
+
+                        cout<<endl;
+                        if(cek==0)
+                            cout<<"Antrian kosong";
+                        else
+                            cout<<"Nomor Antrian saat ini : ";
+                                for(int z=0;z<cek;z++)
+                                {
+                                    cout<<" | ";
+                                    cout<<" "<<z+1;
+                                    cout<<" | ";
+                                }
+                    cout<<endl<<endl;
+                    system("PAUSE");
+                    }
+
+                }
+            }
+
+    }while(pil!='3');
+akhir
