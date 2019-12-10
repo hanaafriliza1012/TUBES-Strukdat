@@ -1,2 +1,45 @@
-#include<iostream>
-using namespace std
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+#include "rs.h"
+#include "rh.h"
+
+using namespace std;
+
+
+mulai()
+awal
+
+    identitas id[15];
+    antri ant[15];
+    int cek=0, y=0, hapus;
+    int bayar=0;
+    char pil;
+    do {
+            system("cls");
+            cetak<<"\n\t\t ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+            cout<<"\n\t\t ||              PROGRAM ANTRIAN RUMAH SAKIT UMUM DAERAH LAMPUNG CERIA               ||";
+            cout<<"\n\t\t ||  jln.Zainal Abidin Pagar Alam, No.001 , Kecamatan Rajabasa , Kota Bandar Lampung ||";
+            cout<<"\n\t\t ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl<<endl;
+                 if(cek==0){
+		 
+                            cout<<"Antrian kosong"<<endl;}
+                            else {
+                            	cout<<"Antrian saat ini\t:\n\n";
+                                for(int z=0;z<cek;z++)
+                                {
+
+                                    cout<<"Nomor Antri\t: "<<z+1;
+                                    cout<<endl;
+                                    cout<<"Nama Pasien\t: "<<id[z].nama<<endl;
+                                    cout<<"Nomor BPJS\t: "<<id[z].no_bpjs<<endl;
+                                    cout<<"BPJS / NON-BPJS\t: ";
+                                    if(id[z].jenis=='a' || id[z].jenis=='A')
+                                    {
+                                        cout<<"BPJS";
+                                    }
+                                    else if(id[z].jenis=='b' || id[z].jenis=='B')
+                                    {
+                                        cout<<"NON-BPJS";
+                                    }
+                                 cout<<endl;
