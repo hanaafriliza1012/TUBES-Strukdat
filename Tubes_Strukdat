@@ -43,3 +43,48 @@ awal
                                         cout<<"NON-BPJS";
                                     }
                                  cout<<endl;
+				  cout<<endl;
+                                }
+                                cout<<endl;
+							}
+            cout<<"1. Masukan Antrian Pasien"<<endl;
+            cout<<"2. Antrian Selanjutnya"<<endl;
+            cout<<"3. Keluar"<<endl;
+         cout<<endl;
+         
+    
+                            
+                            
+            cout<<"Masukkan pilihan Anda (1-3)\t= ";
+            cin>>pil;
+         cout<<endl;
+if(pil!='1' && pil !='2' && pil !='3' )
+{
+    cout<<"Anda salah memasukkan pilihan\n\n";
+    system("PAUSE");
+}
+            else
+            {
+                if(pil=='1')  // DEQUEUE
+                {
+                    if(cek==15 && y==15)
+                    {
+                        cout<<"ANTRIAN PENUH!!!";
+                    }
+                    
+                        cout<<endl;
+                        system("cls");
+                        cout<<"Nama Pasien \t: ";
+                        cin>>id[cek].nama;
+                        ulang:
+                        cout<<"Jenis jenis\t: \n";
+                        cout<<"\t: A.BPJS\n";
+                        cout<<"\t  B.NON-BPJS\n"<<"Pilih\t: ";
+                        cin>>id[cek].jenis;
+                        if(id[cek].jenis=='a' || id[cek].jenis=='A' )
+                        {
+                        
+                            cout<<"Nomor BPJS\t: ";
+                            cin>>id[cek].no_bpjs;
+                        }
+                        else if(id[cek].jenis=='b' || id[cek].jenis=='B'){
